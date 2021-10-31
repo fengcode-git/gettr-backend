@@ -1,0 +1,52 @@
+{
+  "name": "gettr-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/app-root-path": "^1.2.4",
+    "@types/body-parser": "^1.19.1",
+    "@types/express": "^4.17.13",
+    "@types/express-pino-logger": "^4.0.2",
+    "@types/formidable": "^1.2.3",
+    "@types/jsonwebtoken": "^8.5.4",
+    "@types/md5": "^2.3.1",
+    "@types/morgan": "^1.9.3",
+    "@types/mysql": "^2.15.19",
+    "@types/node": "^16.3.0",
+    "@types/pino": "^6.3.9",
+    "@types/uuid": "^8.3.1",
+    "@types/validator": "^13.6.3",
+    "nodemon": "^2.0.10",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "app-root-path": "^3.0.0",
+    "body-parser": "^1.19.0",
+    "dayjs": "^1.10.6",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-pino-logger": "^6.0.0",
+    "express-winston": "^4.1.0",
+    "formidable": "^1.2.2",
+    "jsonwebtoken": "^8.5.1",
+    "md5": "^2.3.0",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "pino": "^6.11.3",
+    "pino-pretty": "^5.1.1",
+    "uuid": "^8.3.2",
+    "validator": "^13.6.0",
+    "winston": "^3.3.3"
+  },
+  "scripts": {
+    "start": "ts-node --files src/app.ts",
+    "db": "ts-node --files src/db.ts",
+    "dev": "nodemon --watch src/**/*.ts --exec ts-node --files src/app.ts",
+    "run": "node dist/app.js",
+    "build": "rimraf ./dist && tsc"
+  }
+}
